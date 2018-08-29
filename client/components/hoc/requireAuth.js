@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { graphql } from 'react-apollo';
-import currentUserQuery from '../queries/CurrentUser';
 import { hashHistory } from 'react-router';
+import { graphql } from 'react-apollo';
+import currentUserQuery from '../../queries/CurrentUser';
 
 
 export default (WrappedComponent) => {

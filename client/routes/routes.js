@@ -3,10 +3,10 @@ import { Route, Switch } from 'react-router-dom';
 
 import Home from '../components/Home';
 import Nav from '../components/molecules/Nav';
-import LoginForm from '../components/LoginForm';
-import SignupForm from '../components/SignupForm';
+import Login from '../components/Login';
+import Signup from '../components/Signup';
 import Dashboard from '../components/Dashboard';
-import requireAuth from '../components/requireAuth';
+import requireAuth from '../components/hoc/requireAuth';
 
 const routes = () => {
   return (
@@ -14,8 +14,8 @@ const routes = () => {
       <Nav />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/login" component={LoginForm} />
-        <Route path="/signup" component={SignupForm} />
+        <Route path="/login" component={Login} />
+        <Route path="/signup" component={Signup} />
         <Route path="/dashboard" component={requireAuth(Dashboard)} />
       </Switch>
     </div>

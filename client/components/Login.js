@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import AuthForm from './AuthForm';
+import AuthForm from './organisms/AuthForm';
 import { graphql } from 'react-apollo';
 import { hashHistory } from 'react-router';
 import mutation from '../mutations/Login';
 import query from '../queries/CurrentUser';
 
-class LoginForm extends Component {
+class Login extends Component {
   constructor(props) {
     super(props);
 
@@ -44,5 +44,5 @@ class LoginForm extends Component {
 }
 
 export default graphql(query)(
-  graphql(mutation)(LoginForm)
+  graphql(mutation)(Login)
 );
