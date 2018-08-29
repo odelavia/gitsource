@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
-import { Link } from 'react-router';
-import query from '../queries/CurrentUser';
-import mutation from '../mutations/Logout';
+import { Link } from 'react-router-dom';
+import query from '../../queries/CurrentUser';
+import mutation from '../../mutations/Logout';
 
-class Header extends Component {
+class Nav extends Component {
   renderButtons() {
     const { loading, user } = this.props.data;
 
@@ -50,5 +50,5 @@ class Header extends Component {
 }
 
 export default graphql(mutation)(
-  graphql(query)(Header)
+  graphql(query)(Nav)
 );
