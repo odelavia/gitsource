@@ -8,7 +8,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "serve:client:dev": "nodemon index.js --ignore client",
+    "server:dev": "nodemon index.js --ignore client",
     "build:prod": "webpack --config webpack.prod.js",
     "revert": "git reset --hard HEAD^^"
   },
