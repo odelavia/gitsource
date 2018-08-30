@@ -12,8 +12,9 @@ const keys = require('../config/keys');
 // Create a new Express application
 const app = express();
 
-// Replace with your mongoLab URI
+// Replace with your mongoLab URI and Express session secret
 const MONGO_URI = keys.DB;
+const EXPRESS_SECRET = keys.SESH_SECRET
 
 // Mongoose's built in promise library is deprecated, replace it with ES2015 Promise
 mongoose.Promise = global.Promise;
@@ -33,7 +34,7 @@ mongoose.connection
 app.use(session({
   resave: true,
   saveUninitialized: true,
-  secret: 'aaabbbccc',
+  secret: EXPRESS_SECRET,
   store: new MongoStore({
     url: MONGO_URI,
     autoReconnect: true
