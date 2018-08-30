@@ -58,7 +58,7 @@ app.use('/graphql', expressGraphQL({
 // a single bundle.js output of all of our client side Javascript
 const webpackMiddleware = require('webpack-dev-middleware');
 const webpack = require('webpack');
-const webpackDevConfig = require('../webpack.dev.js');
+const webpackDevConfig = require('../build-utils/webpack.dev');
 app.use(webpackMiddleware(webpack(webpackDevConfig)));
 
 module.exports = app;
