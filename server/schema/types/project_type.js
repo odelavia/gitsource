@@ -20,13 +20,13 @@ const ProjectType = new GraphQLObjectType({
     repoURL: { type: GraphQLString },
     img: { type: GraphQLString },
     members: {
-     type: new GraphQLList(UserType),
-     resolve(project) {
-       return [
-         {id: 1, name: `Project: ${project.id}, Member: 1`},
-         {id: 2, name: `Project: ${project.id}, Member: 2`}
-       ];
-     }
+      type: new GraphQLList(UserType),
+      resolve(project) {
+        return [
+          {id: 1, name: `Project: ${project.id}, Member: 1`},
+          {id: 2, name: `Project: ${project.id}, Member: 2`}
+        ];
+      }
     }
   }
 });

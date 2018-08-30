@@ -7,7 +7,13 @@ const Schema = mongoose.Schema;
 // plain text - see the authentication helpers below.
 const UserSchema = new Schema({
   email: String,
-  password: String
+  password: String,
+  username: { type: String, default: '' },
+  avatar: { type: String, default: '' },
+  skillset: { type: [String], default: [] },
+  google: String,
+  facebook: String,
+  github: String
 });
 
 // The user's password is never saved in plain text.  Prior to saving the
