@@ -11,16 +11,12 @@ class Nav extends Component {
     if (loading) {
       return <div />;
     } else if (user) {
-      return <li><a onClick={this.onLogoutClick.bind(this)}>Logout</a></li>;
+      return <a onClick={this.onLogoutClick.bind(this)}>Logout</a>;
     } else {
       return (
         <div>
-          <li>
             <Link to='/signup'>Signup</Link>
-          </li>
-          <li>
             <Link to='/login'>Login</Link>
-          </li>
         </div>
       );
     }

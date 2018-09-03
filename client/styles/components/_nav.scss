@@ -1,0 +1,41 @@
+nav {
+ display: flex;
+ align-items: center;
+ width: 100vw;
+ height: 80px;
+ background-color: #333A41;
+ padding: 20 40px;
+
+ .nav-wrapper {
+  display: grid;
+  grid-template-columns: 130px 8fr 1fr;
+  grid-template-areas: "logo . links";
+  width: 100%;
+  height: 100%;
+
+  .brand-logo {
+   display: flex;
+   align-items: center;
+   font-size: 26px;
+   font-weight: 400;
+   color: $gitsource-red;
+  }
+
+  .left {
+   grid-area: logo;
+  }
+
+  .right {
+   grid-area: links;
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   height: 100%;
+
+    a {
+     color: white;
+     font-size: 18px;
+    }
+  }
+ }
+}
