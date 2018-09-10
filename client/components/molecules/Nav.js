@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { graphql } from 'react-apollo';
 import { Link } from 'react-router-dom';
 import query from '../../queries/CurrentUser';
